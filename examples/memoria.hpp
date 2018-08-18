@@ -1,0 +1,4 @@
+#ifndef __EXAMPLES_MEMORIA_HPP__
+#define __EXAMPLES_MEMORIA_HPP__
+
+#endif //EXAMPLES_MEMORIA_HPP

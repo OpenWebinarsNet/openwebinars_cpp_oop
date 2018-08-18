@@ -1,0 +1,4 @@
+#ifndef __EXAMPLES_CLASES_HPP__
+#define __EXAMPLES_CLASES_HPP__
+
+#endif //EXAMPLES_CLASES_HPP

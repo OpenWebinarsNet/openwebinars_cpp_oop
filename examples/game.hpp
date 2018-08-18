@@ -1,0 +1,4 @@
+#ifndef __EXAMPLES_GAME_HPP__
+#define __EXAMPLES_GAME_HPP__
+
+#endif //EXAMPLES_GAME_HPP
