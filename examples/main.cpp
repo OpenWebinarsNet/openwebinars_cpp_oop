@@ -1,6 +1,7 @@
 #include <iostream>
+#include "memoria.hpp"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    all_memory_examples();
     return 0;
 }
