@@ -15,5 +15,7 @@ int main() {
     LimitRunApp().run_test_app();
     std::cout << "Friend example" << std::endl;
     test_friends();
+    std::cout << "Polymorphism example" << std::endl;
+    test_polymorphism();
     return 0;
 }

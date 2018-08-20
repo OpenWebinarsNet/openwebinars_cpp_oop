@@ -3,6 +3,8 @@
 
 #include <functional>
 #include <iostream>
+#include <vector>
+#include <string>
 
 class StatefulApp
 {
@@ -105,6 +107,41 @@ void test_friends()
     std::cout << "A within B value: " << b.m_fiend.get_val() << std::endl;
     b.add_one_to_friend();
     std::cout << "B acces A and modifies its private value: " << b.m_fiend.get_val() << std::endl;
+}
+
+class Animal{
+public:
+    std::string type_str;
+    Animal(std::string s): type_str(s){}
+};
+
+class Cat : public Animal
+{
+public:
+    Cat() : Animal("Cat"){}
+};
+
+class Dog   : public Animal
+{
+public:
+    Dog() : Animal("Dog"){}
+};
+
+class Horse : public Animal
+{
+public:
+    Horse() : Animal("Horse"){}
+};
+
+void test_polymorphism()
+{
+    std::vector<Animal> animals;
+    animals.push_back(Cat());
+    animals.push_back(Dog());
+    animals.push_back(Horse());
+    for (auto& a: animals) {
+        std::cout << "Animal type: " << a.type_str << std::endl;
+    }
 }
 
 #endif //EXAMPLES_HERENCIA_HPP
