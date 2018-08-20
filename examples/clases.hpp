@@ -33,7 +33,7 @@ public:
         }
     }
 
-    int get_private_attr()
+    int get_private_attr() const //importante, si no se modifica la clase, la funcion es const
     {
         return *m_private_attr;
     }
@@ -43,7 +43,7 @@ public:
         if(m_private_attr) *m_private_attr = n;
     }
 
-    void print_values()
+    void print_values() const 
     {
         std::cout   << "["
                     << *m_private_attr

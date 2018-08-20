@@ -74,4 +74,37 @@ public:
         app.stop();
     }
 };
+
+
+
+class A
+{
+public:
+    A(int val = 0):m_value(val){}
+    friend class B;
+    int get_val() const {return m_value;}
+private:
+    int m_value;
+};
+
+class B
+{
+public:
+    A m_fiend;
+
+    B() : m_fiend(10) {}
+    void add_one_to_friend() {m_fiend.m_value += 1;}
+
+};
+
+void test_friends()
+{
+    A a;
+    //a.m_value = 10;//ERROR cannot acces
+    B b;
+    std::cout << "A within B value: " << b.m_fiend.get_val() << std::endl;
+    b.add_one_to_friend();
+    std::cout << "B acces A and modifies its private value: " << b.m_fiend.get_val() << std::endl;
+}
+
 #endif //EXAMPLES_HERENCIA_HPP

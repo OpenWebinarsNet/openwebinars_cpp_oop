@@ -13,5 +13,7 @@ int main() {
     class_example();
     std::cout << "Inheritance examples" << std::endl;
     LimitRunApp().run_test_app();
+    std::cout << "Friend example" << std::endl;
+    test_friends();
     return 0;
 }
